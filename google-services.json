@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "796681771399",
+    "project_id": "krigzlist",
+    "storage_bucket": "krigzlist.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796681771399:android:448c9a0965bee8ad861b22",
+        "android_client_info": {
+          "package_name": "com.kristian.Krigzlist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796681771399-6vrmsm3ds59oejn9klr58pv8eajls27u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYVywHb64gU08hcpqqHgflvc1atRluSlw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "796681771399-6vrmsm3ds59oejn9klr58pv8eajls27u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
