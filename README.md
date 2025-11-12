@@ -14,8 +14,6 @@ It’s designed to make shopping faster, smarter, and a little more fun 😄
 - 🧠 Automatically sort or categorize items to keep things organized  
 - 🌙 Switch between light and dark modes for a better UI experience  
 
----
-
 ### 🧰 Technologies
 ---
 - ⚡ Vite  
@@ -44,7 +42,7 @@ Here's what you can do with KrigzList
 
 - 📱 Mobile-friendly layout
 
-###🛠️ How I Built It
+### 🛠️ How I Built It
 ---
 - Started with the layout:
   Used HTML and CSS to create a simple but responsive structure.
@@ -61,7 +59,7 @@ Here's what you can do with KrigzList
 - UI polish:
   Styled with modern CSS (flexbox, transitions, and custom color themes).
 
-###🧠 What I Learned
+### 🧠 What I Learned
 ---
 - How to use DOM manipulation effectively in JavaScript
 - Managing data using the Local Storage API
