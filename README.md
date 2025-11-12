@@ -100,4 +100,13 @@ This will open the Expo Developer Tools in your browser.
 
 - 🧾 Integrate with barcode scanning or voice input
 
+# 👨‍💻 Author
+
+- Kristian
+- 💻 Software Engineer | 🎮 Gamer | 🎥 YouTuber
+
+- 📫 How to reach me: [Sharkytailer@gmail.com](mailto:sharkytailer@Gmail.com)
+
+- ⭐ If you like this project, give it a star — it really helps!
+
 
