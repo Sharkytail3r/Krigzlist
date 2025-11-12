@@ -22,7 +22,7 @@ It’s designed to make shopping faster, smarter, and a little more fun 😄
 - `🧪 Vitest ` 
 - `🔍 Cypress ` 
 - `🧰 Testing Library`
--` Expo`
+- `Expo`
 
  ## Features
 
@@ -71,14 +71,23 @@ Here's what you can do with KrigzList
 - Clone this repository:
   
     `git clone https://github.com/yourusername/smart-shopping-list.git`
+  
 - Navigate to the project folder:
+  
     `cd smart-shopping-list`
+  
 - Install Expo CLI (if you don’t have it)
+  
     `You can install the classic Expo CLI globally with npm:` `npm install --global expo-cli`
+  
 -  Install dependencies:
+- 
     `npm install`
+  
 - Start the Expo server:
+  
     `expo start`
-  This will open the Expo Developer Tools in your browser.
+  
+This will open the Expo Developer Tools in your browser.
 
 
