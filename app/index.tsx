@@ -602,7 +602,7 @@ export default function SmartShoppingListApp() {
       <View style={styles.header}>
         <Text style={styles.headerTitle}>🛒 Krigzlist</Text>
         <Text style={styles.headerSubtitle}>
-          {completedCount}/{totalCount} items completed
+          {completedCount}/{totalCount} items completed ✅
         </Text>
       </View>
 
