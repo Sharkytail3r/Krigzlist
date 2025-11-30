@@ -17,6 +17,7 @@ import {
 // Please ensure you are calling AsyncStorage.setItem, AsyncStorage.getItem, etc., and handling promises and errors properly.
 // Importing AsyncStorage alone does not guarantee your data is being saved or retrieved successfully.
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 
 interface ShoppingItem {
@@ -596,7 +597,7 @@ export default function SmartShoppingListApp() {
   // Render the UI without the iPhone frame, notch, or home indicator
 
   return (
-    <View style={styles.appRoot}>
+    <SafeAreaView style={styles.appRoot}>
       <StatusBar barStyle="light-content" backgroundColor="#1976D2" />
       {/* Header */}
       <View style={styles.header}>
@@ -1457,7 +1458,7 @@ export default function SmartShoppingListApp() {
           </View>
         </View>
       </Modal>
-    </View>
+    </SafeAreaView>
   );
 }
 
