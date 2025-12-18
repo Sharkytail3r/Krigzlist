@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🛒KrigzList
 
 A simple but powerful **shopping list web app** that helps users add, edit, and track grocery items intelligently.  
@@ -114,3 +115,6 @@ This will open the Expo Developer Tools in your browser.
 
 
 
+=======
+# Krigzlist
+>>>>>>> e2b4d892041c1e78479c61c9004070f2a8974212
