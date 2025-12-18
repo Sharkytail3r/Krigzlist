@@ -19,7 +19,6 @@ import {
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-
 interface ShoppingItem {
   id: string;
   name: string;
@@ -193,7 +192,7 @@ export default function SmartShoppingListApp() {
   // Save data to AsyncStorage
   const saveDataToStorage = async (
     itemsToSave: ShoppingItem[],
-    budgetToSave: number,
+    budgetToSave: number
   ) => {
     try {
       await Promise.all([
@@ -224,11 +223,13 @@ export default function SmartShoppingListApp() {
     if (dailyBudget > 0 && newTotal > dailyBudget) {
       Alert.alert(
         "Budget Alert! 🚨",
-        `Adding this item will exceed your daily budget by $${(newTotal - dailyBudget).toFixed(2)}. Do you want to continue?`,
+        `Adding this item will exceed your daily budget by $${(
+          newTotal - dailyBudget
+        ).toFixed(2)}. Do you want to continue?`,
         [
           { text: "Cancel", style: "cancel" },
           { text: "Add Anyway", onPress: () => proceedWithAddItem(price) },
-        ],
+        ]
       );
       return;
     }
@@ -270,23 +271,21 @@ export default function SmartShoppingListApp() {
 
     setItems(
       items.map((item) =>
-        item.id === id ? { ...item, completed: !item.completed } : item,
-      ),
+        item.id === id ? { ...item, completed: !item.completed } : item
+      )
     );
   };
 
   const toggleItemSelection = (id: string) => {
     setSelectedItems((prev) =>
-      prev.includes(id)
-        ? prev.filter((itemId) => itemId !== id)
-        : [...prev, id],
+      prev.includes(id) ? prev.filter((itemId) => itemId !== id) : [...prev, id]
     );
   };
 
   const deleteSelectedItems = () => {
     if (selectedItems.length === 0) return;
     setItems((prevItems) =>
-      prevItems.filter((item) => !selectedItems.includes(item.id)),
+      prevItems.filter((item) => !selectedItems.includes(item.id))
     );
     setSelectedItems([]);
   };
@@ -386,7 +385,7 @@ export default function SmartShoppingListApp() {
         });
         const daySpending = dayItems.reduce(
           (sum, item) => sum + (item.price || 0),
-          0,
+          0
         );
         chartData.push({
           label: date.toLocaleDateString("en-US", { weekday: "short" }),
@@ -411,7 +410,7 @@ export default function SmartShoppingListApp() {
         });
         const weekSpending = weekItems.reduce(
           (sum, item) => sum + (item.price || 0),
-          0,
+          0
         );
         chartData.push({
           label: `Week ${4 - i}`,
@@ -428,7 +427,7 @@ export default function SmartShoppingListApp() {
 
       // Calculate weeks in current month
       const weeksInMonth = Math.ceil(
-        (lastDayOfMonth.getDate() + firstDayOfMonth.getDay()) / 7,
+        (lastDayOfMonth.getDate() + firstDayOfMonth.getDay()) / 7
       );
 
       for (let week = 0; week < Math.min(weeksInMonth, 4); week++) {
@@ -453,7 +452,7 @@ export default function SmartShoppingListApp() {
           });
           const weekSpending = weekItems.reduce(
             (sum, item) => sum + (item.price || 0),
-            0,
+            0
           );
           chartData.push({
             label: `Week ${week + 1}`,
@@ -968,7 +967,7 @@ export default function SmartShoppingListApp() {
                             timeframe.slice(1)}
                         </Text>
                       </TouchableOpacity>
-                    ),
+                    )
                   )}
                 </View>
               </View>
@@ -996,7 +995,10 @@ export default function SmartShoppingListApp() {
                         style={[
                           styles.progressBarFill,
                           {
-                            width: `${Math.min((totalSpent / dailyBudget) * 100, 100)}%`,
+                            width: `${Math.min(
+                              (totalSpent / dailyBudget) * 100,
+                              100
+                            )}%`,
                             backgroundColor: isOverBudget
                               ? "#F44336"
                               : "#4CAF50",
@@ -1022,7 +1024,10 @@ export default function SmartShoppingListApp() {
                   <Text style={styles.insightIcon}>💡</Text>
                   <Text style={styles.insightText}>
                     {completedCount > 0
-                      ? `You've completed ${completedCount} out of ${totalCount} items (${((completedCount / totalCount) * 100).toFixed(1)}%)`
+                      ? `You've completed ${completedCount} out of ${totalCount} items (${(
+                          (completedCount / totalCount) *
+                          100
+                        ).toFixed(1)}%)`
                       : "Start checking off completed items to track your progress!"}
                   </Text>
                 </View>
@@ -1030,8 +1035,8 @@ export default function SmartShoppingListApp() {
                   <View style={styles.insightItem}>
                     <Text style={styles.insightIcon}>⚠️</Text>
                     <Text style={styles.insightText}>
-                      You&apos;re ${(totalSpent - dailyBudget).toFixed(2)} over your
-                      daily budget. Consider reviewing your spending.
+                      You&apos;re ${(totalSpent - dailyBudget).toFixed(2)} over
+                      your daily budget. Consider reviewing your spending.
                     </Text>
                   </View>
                 )}
@@ -1151,8 +1156,8 @@ export default function SmartShoppingListApp() {
 
                     setItems(
                       items.map((item) =>
-                        item.id === editingItem.id ? updatedItem : item,
-                      ),
+                        item.id === editingItem.id ? updatedItem : item
+                      )
                     );
                     setEditingItem(null);
                     resetForm();
@@ -1279,7 +1284,7 @@ export default function SmartShoppingListApp() {
               <TouchableOpacity onPress={() => setShowCategoryModal(false)}>
                 <Text style={styles.modalCancel}>Cancel</Text>
               </TouchableOpacity>
-              <Text style={styles.modalTitle}>Select Category</Text>
+              <Text style={styles.modalTitle}>Select Categorys</Text>
               <View style={{ width: 50 }} />
             </View>
             <ScrollView style={styles.modalContent}>
@@ -1374,7 +1379,7 @@ export default function SmartShoppingListApp() {
                   style={styles.settingsButton2}
                   onPress={() => {
                     setItems(
-                      items.map((item) => ({ ...item, completed: false })),
+                      items.map((item) => ({ ...item, completed: false }))
                     );
                     setShowSettingsModal(false);
                   }}
